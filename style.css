@@ -1,0 +1,159 @@
+:root {
+    --ff-main: 'Heebo', sans-serif;
+    --fs-small: 0.8rem;
+    --fs-medium: 1rem;
+    --fs-between: 2.2rem;
+    --fs-Large: 2rem;
+    --fw-100: 100;
+    --fw-300: 300;
+    --fw-700: 700;
+    --clr-primeray: #020253;
+    --clr-secound: white;
+}
+
+* {
+    font-family: var(--ff-main);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.photoSide {
+    width: 50%;
+}
+
+img {
+    width: 100%;
+}
+
+.contactside {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    margin: 10px;
+}
+
+h1 {
+    color: var(--clr-primeray);
+    font-size: var(--fs-Large);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: var(--fs-medium);
+    font-weight: 300;
+}
+
+.btnAria {
+    margin-top: 1rem;
+}
+
+.btnSubmit {
+    width: 10.375rem;
+    min-height: 3.125rem;
+    background-color: var(--clr-primeray);
+    color: var(--clr-secound);
+    font-size: medium;
+    font-weight: var(--fw-700);
+    border: none;
+    cursor: pointer;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+input {
+    border: none;
+    border-bottom: 3.5px solid var(--clr-primeray);
+    background-color: rgba(197, 197, 197, 0.168);
+    min-height: 2rem;
+    max-width: 400px;
+
+}
+
+input:focus {
+    outline: none !important;
+}
+
+label {
+    font-size: var(--fs-small);
+    font-weight: var(--fw-700);
+}
+
+@media (min-width:320px) and (max-width:768px) {
+    .mainContent {
+        text-align: center;
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+
+        width: 100%;
+        margin: 0;
+        max-height: 50%;
+    }
+
+
+    .photoSide {
+        width: 100%;
+    }
+
+    .btnSubmit {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width:767px) and (max-width:1084px) {
+    .mainContent {
+        text-align: center;
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+
+        width: 100%;
+        margin: 0;
+        max-height: 50%;
+    }
+
+
+    .photoSide {
+        width: 100%;
+    }
+
+    .btnSubmit {
+        margin-bottom: 1rem;
+    }
+
+    form input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
