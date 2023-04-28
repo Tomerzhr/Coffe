@@ -6,9 +6,10 @@
     --fs-Large: 2rem;
     --fw-100: 100;
     --fw-300: 300;
+    --fw-500: 500;
     --fw-700: 700;
-    --clr-primeray: #020253;
-    --clr-secound: white;
+    --clr-primary: #020253;
+    --clr-seconde: white;
 }
 
 * {
@@ -16,7 +17,9 @@
 }
 
 html,
-body {
+body,
+h1,
+p {
     margin: 0;
     padding: 0;
 }
@@ -34,7 +37,7 @@ img {
     width: 100%;
 }
 
-.contactside {
+.contactSide {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -47,14 +50,13 @@ img {
 }
 
 h1 {
-    color: var(--clr-primeray);
+    color: var(--clr-primary);
     font-size: var(--fs-Large);
     font-weight: 700;
 }
 
-h2 {
-    font-size: var(--fs-medium);
-    font-weight: 300;
+p {
+    font-weight: var(--fw-500);
 }
 
 .btnAria {
@@ -62,15 +64,19 @@ h2 {
 }
 
 .btnSubmit {
-    width: 10.375rem;
-    min-height: 3.125rem;
-    background-color: var(--clr-primeray);
-    color: var(--clr-secound);
+    width: 130px;
+    min-height: 40px;
+    background-color: var(--clr-primary);
+    color: var(--clr-seconde);
     font-size: medium;
     font-weight: var(--fw-700);
     border: none;
     cursor: pointer;
+    transition: background-color 0.4s;
+}
 
+.btnSubmit:hover {
+    background-color: #1d1d8b;
 }
 
 form {
@@ -82,7 +88,7 @@ form {
 
 input {
     border: none;
-    border-bottom: 3.5px solid var(--clr-primeray);
+    border-bottom: 3.5px solid var(--clr-primary);
     background-color: rgba(197, 197, 197, 0.168);
     min-height: 2rem;
     max-width: 400px;
@@ -95,7 +101,8 @@ input:focus {
 
 label {
     font-size: var(--fs-small);
-    font-weight: var(--fw-700);
+    font-weight: var(--fw-500);
+    margin-top: 10px;
 }
 
 @media (min-width:320px) and (max-width:768px) {
@@ -108,11 +115,23 @@ label {
         align-items: center;
     }
 
+    .contactSide {
+        width: 100%;
+    }
+
     .content {
 
         width: 100%;
         margin: 0;
         max-height: 50%;
+    }
+
+    form {
+        align-items: center;
+    }
+
+    input {
+        width: 80%;
     }
 
 
@@ -135,11 +154,20 @@ label {
         align-items: center;
     }
 
+
     .content {
 
         width: 100%;
         margin: 0;
         max-height: 50%;
+    }
+
+    input {
+        width: 55%;
+    }
+
+    form {
+        align-items: center;
     }
 
 
