@@ -105,6 +105,9 @@ label {
     margin-top: 10px;
 }
 
+
+/* /////////////media query//////////// */
+
 @media (min-width:320px) and (max-width:768px) {
     .mainContent {
         text-align: center;
